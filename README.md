@@ -58,8 +58,6 @@ os  arquivos dockerfile estão disponíveis nesse repositorio.
 
 ![Imagems](images/container-net-lab.png)
 
-## Contribuição
 
-Contribuições são bem-vindas! Por favor, leia [CONTRIBUTING.md](link-para-contributing.md) para obter mais informações.
 
 
