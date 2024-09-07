@@ -1,0 +1,24 @@
+# Use uma imagem base leve como o Alpine ou Ubuntu
+FROM ubuntu:24.04
+
+# Atualiza o sistema e instala os pacotes de rede
+RUN apt-get update  
+RUN apt-get install -y iproute2         # Ferramentas para visualização e manipulação de rotas e interfaces
+RUN apt-get install -y net-tools        # Ferramentas como ifconfig, netstat, route, etc.
+RUN apt-get install -y tcpdump          # Ferramenta para captura e análise de pacotes
+RUN apt-get install -y traceroute       # Para traçar rotas até um host
+RUN apt-get install -y iputils-ping     # Ferramenta de ping
+RUN apt-get install -y dnsutils         # Ferramentas como nslookup, dig, etc.
+RUN apt-get install -y curl             # Para testar conexões HTTP/HTTPS
+RUN apt-get install -y wget             # Para download de arquivos via HTTP/HTTPS/FTP
+RUN apt-get install -y nmap             # Ferramenta para escanear redes
+RUN apt-get install -y telnet           # Para conexões remotas
+RUN apt-get install -y iptables         # Ferramenta para controle de firewall
+RUN apt-get clean 
+RUN rm -rf /var/lib/apt/lists/*
+
+# Definir o healthcheck
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 CMD ping -c 1 8.8.8.8 || exit 1
+
+# Definir o comando padrão para o container (para mantê-lo rodando)
+CMD ["tail", "-f", "/dev/null"]

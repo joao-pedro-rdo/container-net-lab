@@ -1,0 +1,22 @@
+FROM alpine:latest
+
+# Atualiza o sistema e instala os pacotes de rede
+RUN apk update  
+RUN apk add --no-cache iproute2         # Ferramentas como ip, ss, etc.
+RUN apk add --no-cache net-tools        # Ferramentas como ifconfig, netstat, route, etc.
+RUN apk add --no-cache tcpdump          # Ferramenta para captura e análise de pacotes
+RUN apk add --no-cache traceroute       # Para traçar rotas até um host
+RUN apk add --no-cache iputils          # Ferramentas como ping, clockdiff, etc.
+RUN apk add --no-cache bind-tools       # Ferramentas como nslookup, dig, etc.
+RUN apk add --no-cache curl             # Para testar conexões HTTP/HTTPS
+RUN apk add --no-cache wget             # Para download de arquivos via HTTP/HTTPS/FTP
+RUN apk add --no-cache nmap             # Ferramenta para escanear redes
+RUN apk add --no-cache busybox-extras   # Contém telnet e outras utilidades adicionais
+RUN apk add --no-cache iptables         # Ferramenta para controle de firewall
+RUN apk add --no-cache rm -rf /var/cache/apk/*
+
+# Definir o healthcheck
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 CMD ping -c 1 8.8.8.8 || exit 1
+
+# Definir o comando padrão para manter o container rodando
+CMD ["tail", "-f", "/dev/null"]
