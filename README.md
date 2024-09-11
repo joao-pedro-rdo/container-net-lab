@@ -55,8 +55,11 @@ E esta disponvivel em duas versões:
 os  arquivos dockerfile estão disponíveis nesse repositorio.
 
 ## Imagem da aplicação
+https://github.com/joao-pedro-rdo/container-net-lab/blob/main/images/container-net-lab.png
+<p align="center">
+  <img src="https://github.com/joao-pedro-rdo/container-net-lab/blob/main/images/container-net-lab.png" alt="Imagem" style="border: 5px solid rgba(0, 0, 0, 0.2); border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);"/>
+</p>
 
-![Imagems](images/container-net-lab.png)
 
 
 
