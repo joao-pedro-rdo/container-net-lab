@@ -1,5 +1,11 @@
 
 # Container Net Lab
+# TODO
+
+- [ ] Usar Docker SDK 
+  - [ ] Dockerfile e Dockercompos
+- [ ] Arrumar o publish de porta
+  - [ ] Exibição da porta  
 
 **Descrição:**
 
