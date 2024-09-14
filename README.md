@@ -7,7 +7,7 @@
 - [ ] Arrumar o publish de porta
   - [ ] Exibição da porta  
 
-**Descrição:**
+## Descrição:
 
 Este projeto foi desenvolvido para explorar e testar o SDK do Docker usando Python, com o objetivo de facilitar a criação e gerenciamento de containers para testes de ferramentas de redes. A ideia surgiu a partir de uma necessidade nas aulas de redes da faculdade, onde frequentemente é necessário criar diversos containers e realizar testes de conectividade, tráfego e outros aspectos de redes.
 
@@ -61,7 +61,7 @@ E esta disponvivel em duas versões:
 os  arquivos dockerfile estão disponíveis nesse repositorio.
 
 ## Imagem da aplicação
-https://github.com/joao-pedro-rdo/container-net-lab/blob/main/images/container-net-lab.png
+
 <p align="center">
   <img src="https://github.com/joao-pedro-rdo/container-net-lab/blob/main/images/container-net-lab.png" alt="Imagem" style="border: 5px solid rgba(0, 0, 0, 0.2); border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);"/>
 </p>
